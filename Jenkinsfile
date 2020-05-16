@@ -1,17 +1,20 @@
 pipeline {
+  stages 
+    {
     stage('Clean') {
-        steps {
-            sh 'mvn clean'
-        }
+      steps {
+        sh 'mvn clean'
+      }
     }
-    stage('Complie') {
-        steps {
-            sh 'mvn compile'
-        }
+    stage('Compile') {
+      steps {
+        sh 'mvn compile'
+      }
     }
     stage('Test') {
-        steps {
-            sh 'mvn test'
-        }
+      steps {
+        sh 'mvn test'
+      }
     }
+  }
 }
