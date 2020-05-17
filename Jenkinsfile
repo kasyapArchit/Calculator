@@ -46,10 +46,7 @@ pipeline {
       agent any
       steps {
         script {
-          step([$class: "RundeckNotifier",
-          rundeckInstance: "rundeck",
-          options: """BUILD_VERSION=$BUILD_NUMBER""",
-          jobId: "e1434470-304d-44d0-84c3-b2ea0111ccb7"])
+          sh 'mvn test'
         }
       }
     }
